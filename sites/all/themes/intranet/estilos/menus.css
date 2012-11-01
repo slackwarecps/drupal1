@@ -1,0 +1,129 @@
+#menu{
+	width: 100%;
+	margin-top: 0px;
+}
+
+/*
+.seta{
+position: absolute;
+top: 10px;
+right: 10px;
+}
+
+.setadir{
+position: absolute;
+top: 15px;
+right: 5px;
+}
+*/
+
+
+
+
+
+ul#primary-nav{
+	margin: 0;
+	padding: 0;
+	width: 100%; /* Width of Menu Items */
+	border-bottom: 1px solid #DDD;
+	background: #fff; /* IE6 Bug */
+	}
+	
+	
+
+ul#primary-nav ul {
+	margin: 0;
+	padding: 0;
+	width: 200px; /* Width of Menu Items */
+	border-bottom: 1px solid #DDD;
+	background: #382A60; /* IE6 Bug */
+	}
+
+ul#primary-nav li {
+	position: relative;
+	list-style: none;
+	display:block;
+	}
+
+ul#primary-nav li a {
+	display: block;
+	widows: 100%;
+	text-decoration: none;
+	color: #666;
+	padding: 5px;
+	border: 1px solid #DDD;
+	border-bottom: 0;
+	
+}
+
+ul#primary-nav li ul li a {
+	display: block;
+	widows: 100%;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+	border: 1px solid #FFF;
+	border-bottom: 0;
+	font-size: 12px;
+	font-weight: normal;	
+}
+
+/* Fix IE. Hide from IE Mac \*/
+* html ul#primary-nav li { float: left; height: 1%; }
+* html ul#primary-nav li a { height: 1%; }
+/* End */
+
+
+ul#primary-nav ul {
+	position: absolute;
+	display: none;
+	left: 159px; /* Set 1px less than menu width */
+	top: 0px;
+}
+
+ul#primary-nav li#m_10 ul {
+	top: -105px;
+}
+
+
+
+ul#primary-nav li ul li a {
+	padding: 5px;
+} /* Sub Menu Styles */
+
+ul#primary-nav li:hover ul ul,
+ul#primary-nav li:hover ul ul ul,
+ul#primary-nav li.over ul ul,
+ul#primary-nav li.over ul ul ul { display: none; } /* Hide sub-menus initially */
+
+ul#primary-nav li:hover ul,
+ul#primary-nav li li:hover ul,
+ul#primary-nav li li li:hover ul,
+ul#primary-nav li.over ul,
+ul#primary-nav li li.over ul,
+ul#primary-nav li li li.over ul { display: block; } /* The magic */
+
+ul#primary-nav li.menuparent { background: transparent url(../imagens/seta_menu_off.gif) 140px center no-repeat; }
+
+ul#primary-nav li.menuparent:hover,
+ul#primary-nav li.over{ 
+	background-color: #84C225;
+	color: #FFF; 
+}
+ul#primary-nav li a:hover{
+	background-color: #84C225;
+	color: #FFF;
+}
+
+
+@media print{
+	#menu{
+		display: none;
+	}
+	ul#primary-nav{
+		display: none;
+	}
+}
+
+
+

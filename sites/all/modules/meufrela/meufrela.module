@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * Implementation of hook_help().
+ */
+
+function meufrela_form_cadastro_empresa(){
+  $form['nome'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Nome'),
+    '#required' => TRUE, // Added      
+  );
+  
+$form['estado'] = array(
+   '#type' => 'select',
+   '#title' => t('Estado'),    
+   '#options' => array(
+            '27' => t('Acre'),
+            '21' => t('Alagoas'),
+            '26' => t('Amapá'),
+            '25' => t('Amazonas'),
+            '1' => t('Bahia'),
+            '5' => t('Ceará'),
+            '19' => t('Distrito Federal'),
+            '15' => t('Espírito Santo'),
+            '3' => t('Goiás'),
+            '12' => t('Maranhão'),
+            '16' => t('Mato Grosso'),
+            '20' => t('Mato Grosso do Sul'),
+            '2' => t('Minas Gerais'),
+            '4' => t('Pará'),
+            '22' => t('Paraiba'),
+            '6' => t('Paraná'),
+            '9' => t('Pernambuco'),
+            '18' => t('Piauí'),
+            '7' => t('Rio de Janeiro'),
+            '13' => t('Rio Grande do Norte'),
+            '14' => t('Rio Grande do Sul'),
+            '11' => t('Rondônia'),
+            '23' => t('Rorâima'),
+            '8' => t('Santa Catarina'),
+            '17' => t('São Paulo'),
+            '24' => t('Sergipe'),
+            '10' => t('Tocantins')
+      ),    
+   '#description' => t('Selecione um Estado'),
+    '#ahah' => array(
+      'path' => 'acesso/callback',
+      'wrapper' => 'migue',
+      // 'event' => 'change', // default value: does not need to be set explicitly.
+    ),    
+);    
+
+$form['migue'] = array(
+    '#type' => 'markup',
+    '#value' => '<div>' . t('MARKUP WITH DIVS') . '</div>',
+  );
+
+  $form['submit'] = array('#type' => 'submit', '#value' => t('Salvar'));
+  return $form;
+}
+
+function meufrela_ajax_lista_cidades(){
+    return 'nada';
+}
+
+function meufrela_form_cadastro_empresa_validate($form, &$form_state) {
+
+}
+
+function meufrela_form_cadastro_empresa_callback() { 
+   
+ // $output .= 'asd asd asda sdas das ad  asd asd asd sad ';
+ //return   $output;
+// Output the results and exit.
+ $colors = preg_split('/[ ,]+/', "aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow");
+  $color = $colors[array_rand($colors)];
+  $output = '<div style="background-color:' . $color .
+    '; width: 150px; height: 150px; border: 1px solid black;">This is ' . $color . ' box</div>';  
+  drupal_json(array('status' => TRUE, 'data' => $output));
+  exit();
+}
+
+function meufrela_form_cadastro_empresa_submit($form, &$form_state) {
+//var_dump($form);die;
+$nome = $form_state['values']['nome'];
+$estadokey = $form_state['values']['estado'];
+//$estado = $form['estado']['#options'][$estadokey];
+//echo $estado;die;
+db_set_active('acesso');
+
+$count = db_result(db_query('SELECT COUNT(*) FROM {nin_empresa}'));
+//Insert row in another database.
+db_query("insert into nin_empresa (nome,estado,cidade) values ('".$nome."','".$estadokey."','');");
+
+//Switch back to the default connection when finished.
+db_set_active('default');
+watchdog('Cadastro de Empresa', 'Inserido novo Registro no Banco');
+drupal_set_message(t('Arquivo Inserido no Banco de dados.'.$count));
+}
+
+
+function meufrela_menu() {
+  $items['acesso/cadastro/empresa'] = array(
+    'title' => t('Cadastro de Empresa'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('meufrela_form_cadastro_empresa'),        
+    'access callback' => TRUE,
+  );
+  
+  $items['acesso/callback'] = array(
+    'page callback' => 'meufrela_form_cadastro_empresa_callback',
+    'access callback' => TRUE,    
+    'type' => MENU_CALLBACK,
+  );   
+
+  return $items;  
+}
+
+function meufrela_ninja(){
+    return 'ninja!!!';
+}
+

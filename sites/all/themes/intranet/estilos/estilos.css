@@ -1,0 +1,888 @@
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO ESTRUTURA  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+body{
+	margin: 5px;
+	padding: 0;
+	list-style: none;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a:link, a:visited{
+	color: #382A60;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	color: #84C225;
+}
+
+#pagina{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+
+#esquerda{
+	background: #FFF;
+	border: 1px solid #DDD;
+	width: 160px;
+	height: auto;
+	float: left;
+	position: fixed;
+    *position: absolute;
+	top: expression( ( 0+( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	z-index: 2;
+}
+
+#direita{
+	width: 820px;
+	height: auto;
+	position: absolute;
+	margin-left: 168px;
+}
+
+.topo{
+	width: 820px;
+	height: 100px;
+	background: #FFF;
+	clear: both;
+}
+
+.info{
+	background: #84C225;
+	width: 810px;
+	height: 30px;
+	line-height: 30px; 
+	clear: both;
+	color: #FFF;
+	padding: 0 5px 0 5px;
+	font-size: 12px;
+}
+
+#conteudo{
+	width: 98%;
+	height: auto;
+	margin: 2px 0 5px auto;
+	border: 1px solid #DDD;
+	border-top: 2px solid #382A60;
+	float: right;
+	background: #FFF;
+	padding: 0 1% 0 1%;
+}
+
+.bug{
+	width: 100%;
+	height: 10px;
+	size: 2px;
+	clear: both;
+}
+
+img.foto{
+	border: 1px solid #DDD;
+	float: right;
+	padding: 2px;
+	margin: 5px;
+}
+
+
+h1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #382A60;
+	font-weight: bold;
+	border-bottom: 1px solid #382A60;
+	padding: 10px 5px;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+h3{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #382A60;
+	background: #EEE;
+	font-weight: bold;
+	border-bottom: 1px solid #382A60;
+	height: 32px;
+	line-height: 32px;
+	margin: 0;
+	margin-bottom: 10px;
+	display: block;
+	cursor: pointer;
+}
+
+h3.seta_down{
+	background: #EEE url(../imagens/icones/down_red.gif) no-repeat 5px center;
+	text-indent: 30px;
+}
+h3.seta_up{
+	background: #EEE url(../imagens/icones/up_black.gif) no-repeat 5px center;
+	text-indent: 30px;
+}
+
+
+.destaque_azul{
+	font-weight: bold;
+	color: #382A60;
+}
+
+hr{
+	border: 0;
+	border-top: 1px solid #DDD;
+	width: 100%;
+	margin: 10px 0 10px 0;
+	clear: both;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM ESTRUTURA  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO PÁGINAS HOME  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.modulos_home_g{
+	width: 493px;
+	height: 100px;
+	padding: 0px;
+	border: 1px solid #DDD;
+	margin: 5px;
+}
+
+.modulos_home_p{
+	width: 285px;
+	height: 100px;
+	padding: 0px;
+	border: 1px solid #DDD;
+	margin: 5px;
+}
+
+.modulos_home_g h2, .modulos_home_p h2{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	background: url(../imagens/bg_topicos.gif) repeat-x;
+	border-bottom: 1px solid #DDD;
+	font-size: 18px;
+	color: #666;
+}
+
+.logos{
+	width: 788px;
+	widows: 100px;
+	margin: 5px;
+	border: 1px solid #DDD;
+	float: left;
+}
+
+a.logo_home{
+	margin: 10px 7px 10px 7px;
+}
+
+
+a.box_home:link, a.box_home:visited, a.box_home:hover{
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #DDD;
+	float: left;
+	margin: 5px;
+	display: block;
+}
+
+.result_ramal{
+	padding: 5px 0 5px 100px;
+	line-height: 150%;
+}
+.ramal{
+	font-weight: bold;
+	font-size: 20px;
+	color: #84C225;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM PÁGINAS HOME  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO PÁGINA VENDAS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+#regioes{
+	float: left;
+	width: 358px;
+	height: auto;
+}
+
+.reg{
+	width: 80px;
+	height: auto;
+	border: 1px solid #DDD;
+	background: #FFF;
+	clear: both;
+	margin: 0px 7px 7px 0;
+	cursor: pointer;
+}
+
+.subreg{
+	width: 80px;
+	height: auto;
+	border: 1px solid #DDD;
+	background: #FFF;
+	float: left;
+	margin: 0px 7px 7px 0;
+	cursor: pointer;
+}
+
+.reg h2{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	color: #FFF;
+	background: #84C225;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.reg h2.laranja{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	color: #FFF;
+	background: #FF9900;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.subregioes{
+	height: auto;
+	width: 268px;
+	float: right;
+	margin-top: 0px;
+}
+
+.subreg a:link, .subreg a:visited{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	color: #FFF;
+	background: #382A60;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+.subreg a:hover{
+	text-decoration: underline;
+}
+
+#vendSPS100{
+	width: 100%;
+	clear: both;
+}
+
+#vendSPS100 table td{
+	border-bottom: 1px solid #EEE;
+	border-top: 1px solid #EEE;
+}
+
+.nome_regiao, .nome_regiao strong{
+	color: #382A60;
+}
+.nome{
+	color: red;
+}
+
+.legenda{
+	margin: 5px 0 5px 0;
+	font-size: 10px;
+}
+
+.busca{
+	margin: 10px 0 10px 0;
+}
+
+#mapas{
+	float: right;
+	border-left: 1px solid #DDD;
+	padding-left: 5px;
+}
+
+.legendas_mapa{
+	margin: 10px 0 0 30px;
+}
+
+.legendas_mapa ul li{
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.legendas_mapa img{
+	margin-right: 5px;
+}
+
+.tabela_info_venda *{
+	font-size: 11px;
+}
+
+.tabela_info_venda td{
+	width: 25%;
+	border: 1px solid #DDD;
+	padding-bottom: 10px;
+	background: #F2F2F2;
+}
+
+.cargo{
+	color: #382A60;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 10px 0 0 0;
+	display: block;
+}
+
+.info_vendedor{
+	float: left;
+	margin-top: 10px;
+	width: 55%;
+}
+
+.mapa_regiao{
+	float: right;
+	margin-top: 10px;
+	width: 40%;
+	text-align: right;
+	margin: 30px 10px 0 0;
+	border: 1px solid #DDD;
+}
+
+.menu_vendedor{
+	width: 50%;
+	float: left;
+}
+
+.menu_vendedor td{
+	border: 0;
+	padding: 5px;
+}
+
+td.carro, td.celular{
+	background: #EEE;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.foto_vendedor{
+	float: right;
+}
+
+.setor{
+	font-size: 18px;
+	font-weight: bold;
+	color: #84C225;
+}
+.desc_setor{
+	font-size: 14px;
+	font-weight: bold;
+	color: #382A60;
+}
+
+.seta_down{
+	background: url(imagens/icones/down_red.gif) no-repeat 5px center;
+}
+
+.hoteis{
+	width: 90%;
+}
+
+.hoteis li{
+	margin-bottom: 10px;
+	padding-left: 10%;
+}
+.nome_hotel{
+	color: #84C225;
+	font-weight: bold;
+}
+
+.distritos td{
+	font-size: 10px;
+	padding: 5px;
+	border: 1px solid #FFF;
+}
+.distritos td.cinza{
+	font-size: 10px;
+	padding: 5px;
+	border: 1px solid #EEE;
+}
+
+
+.div_ocorrencias{
+	position: fixed;
+	background: #FFFFCE;
+	padding: 0 10px 10px 10px;
+	width: 350px;
+	height: 250px;
+	overflow-y:scroll;
+	border: 5px solid #84C225;
+	display: none;
+	font-size: 10px !important;
+	cursor: pointer;
+	left: 50%;
+    margin-left: -175px;
+	top: 150px;
+	z-index: 10;
+}
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM PÁGINA VENDAS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO ESTILOS TABELAS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.tabela{
+	width: 100%;
+}
+
+.cabecalho{
+	background: #382A60;
+	color: #FFF;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.nome_cliente{
+	background: #EEE;
+	border-bottom: 1px solid #000;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.dados{
+	padding: 5px 0 20px 0;
+	text-transform: uppercase;
+}
+.dados2{
+	padding: 5px 0 20px 0;
+	text-transform: normal;
+}
+
+.cod_cliente{
+	color: #84C225;
+	font-size: 16px;
+}
+
+.data{
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.cabecalho a{
+	color: #FFF;
+	font-size: 16px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM ESTILOS TABELAS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INICIO ANIVERSARIANTES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.aniversario{
+	width: 98%;
+	height: 115px;
+	overflow-x: auto;
+	overflow-y:hidden;
+	margin: 0 auto 0 3px;
+	background: #EEE;
+}
+
+.aniversariantes{
+	float: left;
+	height: auto;
+	width: 205px;
+	font-size: 10px;
+	padding: 3px;
+	margin: 3px;
+	border: 1px solid #CCC;
+	background: #FFF;
+}
+.aniversariantes2{
+	float: left;
+	height: auto;
+	width: 31%;
+	height: 100px;
+	font-size: 10px;
+	padding: 3px;
+	margin: 3px;
+	border: 1px solid #CCC;
+	background: #FFF;
+}
+.aniversariantes img, .aniversariantes2 img{
+	float: left;
+	margin-right: 5px;
+}
+.mes{
+	clear: both;
+	background: #DDD;
+	padding: 3px;
+	text-align: center;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM ANIVERSARIANTES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO PÁGINAS RELATÓRIOS DE OCORRÊNCIAS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.box_rel{
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #DDD;
+}
+
+.check{
+	width: 15px;
+	height: 15px;
+	float:left;
+	border: 1px solid #DDD;
+	padding: 3px;
+	margin-right: 10px;
+	text-align: center;
+	background: #FFF;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM PÁGINAS RELATÓRIOS DE OCORRÊNCIAS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO PÁGINAS RELATÓRIOS DE VENDAS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+table.relatorio_vendas{
+	width: 100%;
+}
+
+.relatorio_vendas td{
+	border: 1px solid #DDD;
+	padding: 5px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM PÁGINAS RELATÓRIOS DE VENDAS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  INÍCIO FORMULÁRIOS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+.inputbox{
+	border: 1px solid #84C225;
+	padding: 3px;
+	background: #FFF;
+}
+
+.inputboxcal, .inputboxcal2, .inputboxcal3{
+	border: 1px solid #84C225;
+	padding: 3px;
+	background: #FFF;
+	float: left;
+}
+
+.btn_form{
+	background: #382A60;
+	font-weight: bold;
+	color: #FFF;
+	border: 0;
+	padding: 3px;
+	font-size: 11px;
+}
+
+.btn_form_large{
+	background: #382A60;
+	font-weight: bold;
+	color: #FFF;
+	border: 0;
+	padding: 9px;
+	font-size: 14px;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  FIM FORMULÁRIOS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX IE6 BOX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+#ie6-box {
+			background-color: #CC0000;
+			padding: 8px;
+			margin-bottom: 4px;
+			position: absolute;
+			z-index: 10;
+		}
+#ie6-box .upgrade-message{
+			font-size: 14px;
+			width: 100%;
+			color: #FFF !important;
+		}
+#ie6-box strong{
+			color: #FFF !important;
+		}
+#ie6-box .upgrade-message a {
+			/* Override link properties because of translation */
+			text-decoration: none !important;
+			color: #FFF !important;
+			border-bottom: 0 !important;
+			cursor: text;
+		}
+#ie6-box .close-button {
+			float: right;
+			display: block;
+			margin-left: 8px;
+		}
+#ie6-box .close-icon {
+			background-position: -57px -712px;
+			display: block;
+			height: 12px;
+			width: 12px;
+		}
+#ie6-box .browser-links {
+			float: right;
+		}
+#ie6-box .browser-link img {
+			background-image: url(http://s.ytimg.com/yt/img/browsers-vfl107426.png);
+			width: 172px;
+			height: 32px;
+			margin-left: 8px;
+			border: 0;
+		}
+#ie6-box .browser-link:hover img {
+			background-position-x: -172px;
+		}
+#ie6-box .chrome-link {
+			background-position-y: 0;
+		}
+#ie6-box .ie8-link {
+			background-position-y: -32px;
+		}
+#ie6-box .firefox-link {
+			background-position-y: -64px;
+		}
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX IE6 BOX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+
+blockquote{
+	padding: 5px 0 5px 50px;
+}
+
+blockquote img{
+	margin: 0 0 10px 0;
+}
+
+
+
+img.demite{
+	padding: 5px;
+	border: 1px solid #DDD;
+}
+
+.box_func{
+	border: 1px solid #DDD;
+	padding: 10px;
+	width: 250px;
+	height: height;
+}
+
+
+.n1{
+	background: #EEE;
+	border: 1px solid #DDD;
+	padding: 5px;
+	width: 90%;
+	cursor: pointer;
+}
+
+
+#setabaixo{
+	float: left;
+	padding-right: 10px;
+}
+
+
+.fipro td{
+	border: 1px solid #000;
+	padding: 3px;
+}
+
+.cinza1{
+	background: #CCC;
+}
+
+.cinza2{
+	background:	#f2f2f2;
+}
+
+.tarja_verde{
+	background:#66FF66;
+	font-weight: bold;
+	color: #000;
+}
+
+ul.avisos{
+	padding: 10px;
+}
+.avisos li{
+	font-weight: bold;
+	color: #CC0000;
+	font-size: 14px;
+	text-align: center;
+
+}
+.data_aviso{
+	color: #000;
+	font-weight: normal;
+}
+
+
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  ESTILOS PÁGINA DE TREINAMENTOS  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+
+h2.treina {
+	font-size: 20px;
+	margin-top: 30px;
+	color: #84C225;
+}
+
+h3.treina{
+	font-size: 14px;
+	color: #000;
+	background: none;
+	border: none;
+}
+
+.ficha{
+	position: absolute;
+	width: 150px; 
+	height:auto; 
+	background:#EEE; 
+	right: 5%;
+	padding: 10px;
+	border: 1px solid #DDD;
+	display: none;
+}
+
+
+
+/* arvore de permissoes - pagina vendas/meus_clientes2.php */
+
+#meusclientes{
+-moz-border-radius:5px 5px 5px 5px;    /* Firefox */
+-webkit-border-radius:5px 5px 5px 5px; /* Safari, Chrome */
+border-radius:5px 5px 5px 5px;         /* CSS3 */ 
+cursor:pointer;
+}
+
+/* gerencia */
+.gerencia_div{background-color:#800080; color:#FFF; width:100px; height:50px; margin-top:50px; line-height:50px;  font-weight:bold; }
+.gerencia_div_d{background-color:#666666; color:#FFF; width:100px; height:50px; margin-top:50px; line-height:50px;  font-weight:bold; cursor:default;  }
+
+
+/* divisao 1 */
+.divisao_div0{background-color:#375395; color:#FFF; width:100px; height:50px; margin-top:30px; line-height:50px; float:left; margin-left:100px; font-weight:bold;}
+/* divisao 2 */
+.divisao_div1{background-color:#58824A; color:#FFF; width:100px; height:50px; margin-top:30px; line-height:50px; float:left; margin-left:100px; font-weight:bold;}
+/* divisao 3 */
+.divisao_div2{background-color:#E95F30; color:#FFF; width:100px; height:50px; margin-top:30px; line-height:50px; float:left; margin-left:100px; font-weight:bold;}
+.divisao_div_d{background-color:#858585; color:#FFF; width:100px; height:50px; margin-top:30px; line-height:50px; float:left; margin-left:100px; font-weight:bold; cursor:default;}
+
+
+/* regiao */
+.regiao_div{  margin-top:20px; width:180px;  height:100%; height:70px; z-index:100;}
+.regiao_div_c0{background-color:#708BCB; color:#FFF; width:100px; float:left; line-height:65px;}
+.regiao_div_c1{background-color:#8CB77D; color:#FFF; width:100px; float:left; line-height:65px;}
+.regiao_div_c2{background-color:#F19A70; color:#FFF; width:100px; float:left; line-height:65px;}
+
+.regiao_div_c_d{background-color:#9E9E9E; color:#FFF; width:100px; float:left; line-height:65px; cursor:default;}
+
+/*estacao */
+.estacao_div0{  color:#333; background-color:#D2D8F2; height:19px; float:right; width:70px; line-height:19px; font-weight:normal; } 
+.estacao_div1{  color:#333; background-color:#C8DCC0; height:19px; float:right; width:70px; line-height:19px; font-weight:normal; } 
+.estacao_div2{  color:#333; background-color:#F9D0BD; height:19px; float:right; width:70px; line-height:19px; font-weight:normal; } 
+.estacao_div_d{  color:#333; background-color:#C9C9C9; height:19px; float:right; width:70px; line-height:19px; font-weight:normal; cursor:default; } 
+
+/*Formulario de Edicao de Usuario*/
+.label_aviso_vermelho {
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.btnsave_frm_edicao_usuario {
+	height: 45px;
+	width: 120px;
+	text-align: center;
+	background-image: url(../imagens/icones/btnsave.png);
+	background-repeat: no-repeat;
+}
+
+.janela_dos {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 10px;
+	color: #00FF00;
+	background-color: #000000;
+}
+
+
+
+/*Formulario de Edicao de Funcionario-RH*/
+#frm_rh_func_cad label.error {
+  background:url(../imagens/icones/unchecked.gif) no-repeat 0px 0px;
+  padding-left: 16px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  color: #EA5200;
+}
+
+#frm_rh_func_cad label.checked {
+  background:url(../imagens/icones/checked.gif) no-repeat 0px 0px;
+}
+.mensagem_box {
+	float: left;
+	padding-top:5px;
+	padding-bottom:5px;	
+}
+.mensagem_icone {
+	float: left;
+	width: 50;
+	padding: 10px;
+}
+.mensagem_texto {
+	float: left;
+	width:250px;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+.div_container{
+	float:left;
+}

@@ -1,0 +1,20 @@
+name = Intranet
+description = Intranet Theme experience
+version = VERSION
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = estilos/estilos.css
+stylesheets[all][] = estilos/menus.css
+regions[info] = Informação
+regions[topo] = Topo da Pagina
+regions[bug] = Bug
+regions[left] = coluna Esquerda
+regions[right] = Coluna Direita
+regions[conteudo] = Conteudo
+regions[adminarea] = Area do Administrador
+
+; Information added by drupal.org packaging script on 2012-05-02
+version = "6.26"
+project = "drupal"
+datestamp = "1335977158"
+
